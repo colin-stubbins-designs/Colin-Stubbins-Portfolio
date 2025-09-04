@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo-icon.png" type="image/png">
+    <link rel="preload" href="img/logo-w-wordmark.png" as="image">
+    <link rel="preload" href="img/logo-w-wordmark-yellow.png" as="image">
+    <title>Colin Stubbins | Great Gatsby Edition</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-inner">
+                <a href="index.html" class="nav-branding">
+                    <img id="logo" src="img/logo-w-wordmark.png" alt="Colin Stubbins' personal brand logo">
+                </a>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">WORK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">CONTACT</a>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="project-head fade-in-section">
+            <h1>Great Gatsby Edition</h1>
+            <h3>Illustration / Editorial</h3>
+        </div>
+
+        <div class="gallery project-hero fade-in-section">
+            <img 
+                src="img/gatsby/logo-800.webp" 
+                srcset= "
+                        img/gatsby/logo-800.webp 800w,
+                        img/gatsby/logo-1800.webp 1800w
+                        "
+                sizes="(max-width: 80em) 100vw, 1280px"
+                alt="White gatsby logo with a dumbbell shaped symbol above the wordmark over a dark blue background.">
+        </div>
+        
+        <div class="gallery-wrapper">
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Idea</h3>
+                    <p>The goal was to create an eye-catching edition of The Great Gatsby. The challenge was to make it look unique compared to other editions of the novel, while still showing representation of the story itself.</p>
+                </div>
+            </div>
+
+            <div id="lightbox-overlay" class="lightbox hidden">
+                <div class="lightbox-content">
+                    <span id="close-btn">&times;</span>
+                    <img id="lightbox-img" src="" alt="Expanded view" />
+                </div>
+            </div>
+
+            <div class="gallery fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/gatsby/moodboard-600.webp"
+                        data-highres="img/gatsby/moodboard-1000.webp"
+                        srcset= "
+                                img/gatsby/moodboard-600.webp 600w,
+                                img/gatsby/moodboard-1000.webp 1000w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Moodboard with different editions of The Great Gatsby and 1920s designs."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/gatsby/sketches-600.webp"
+                        data-highres="img/gatsby/sketches-1000.webp"
+                        srcset= "
+                                img/gatsby/sketches-600.webp 600w,
+                                img/gatsby/sketches-1000.webp 1000w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Sketches I made for the front cover/poster"
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Process</h3>
+                    <p>The use of dark blue and gold is common in designs centered on the Great Gatsby, but a lot of the most important events in the book take place at night and gold is very prominent in the interior decorating of Gatsby's mansion. So these colours represent the novel best. A lot of Art Deco is also commonly used because of the same interior decorating. One of my sketches uses Art Deco, but I ultimately decided to stray from this common theme used.</p>
+                </div>
+            </div>
+
+            <div class="gallery fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/gatsby/colour-codes-400.webp"
+                        data-highres="img/gatsby/colour-codes-780.webp"
+                        srcset= "
+                                img/gatsby/colour-codes-400.webp 400w,
+                                img/gatsby/colour-codes-780.webp 780w,
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Colour palette I used including dark blue, gold, black, and white."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/gatsby/font-pairing-400.webp"
+                        data-highres="img/gatsby/font-pairing-780.webp"
+                        srcset= "
+                                img/gatsby/font-pairing-400.webp 400w,
+                                img/gatsby/font-pairing-780.webp 780w,
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Font pairing I used including Young 20s - regular, Italianno - bold, and Baskerville - regular."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Guidelines</h3>
+                    <p>I used the font, Young 20's, to match with the time the book was written and set.</p>
+                </div>
+            </div>
+
+            <div class="gallery-three fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/gatsby/poster-a-800.webp"
+                        data-highres="img/gatsby/poster-a-2400.webp"
+                        srcset= "
+                                img/gatsby/poster-a-800.webp 800w,
+                                img/gatsby/poster-a-1200.webp 1200w,
+                                img/gatsby/poster-a-2400.webp 2400w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Great Gatsby poster rendition I designed with an illustration of a yellow Rolls Royce over a dark blue background."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/gatsby/poster-b-800.webp"
+                        data-highres="img/gatsby/poster-b-2400.webp"
+                        srcset= "
+                                img/gatsby/poster-b-800.webp 800w,
+                                img/gatsby/poster-b-1200.webp 1200w,
+                                img/gatsby/poster-b-2400.webp 2400w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Great Gatsby poster rendition I designed with an illustration of a dress shirt with a bowtie and handkerchief in solid goldish yellow over a dark blue background."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/gatsby/poster-c-800.webp"
+                        data-highres="img/gatsby/poster-c-2400.webp"
+                        srcset= "
+                                img/gatsby/poster-c-800.webp 800w,
+                                img/gatsby/poster-c-1200.webp 1200w,
+                                img/gatsby/poster-c-2400.webp 2400w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Great Gatsby poster rendition I designed with an illustration of a martine glass in solid goldish yellow over a dark blue background."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Posters</h3>
+                    <p>I feel that the most important motif in the story is Gatsby's yellow Rolls Royce, so I illustrated one in Illustrator to use on the cover.</p>
+                </div>
+            </div>
+
+            <div class="gallery-one fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/gatsby/cover-layout-800.webp"
+                        data-highres="img/gatsby/cover-layout-2400.webp"
+                        srcset= "
+                                img/gatsby/cover-layout-800.webp 800w,
+                                img/gatsby/cover-layout-1400.webp 1400w,
+                                img/gatsby/cover-layout-2400.webp 2400w
+                                "
+                        sizes="(max-width: 75em) calc(100vw - 2rem), 1200px"
+                        alt="Cover layout with an illustration of a yellow Rolls Royce on the cover with the title 'The Great Gatsby' underneath. There is a black spine and on the left is the summary of the auther, F. Scott Fitzgerald."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="gallery fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/gatsby/cover-mockup-800.webp"
+                        data-highres="img/gatsby/cover-mockup-2200.webp"
+                        srcset= "
+                                img/gatsby/cover-mockup-800.webp 800w,
+                                img/gatsby/cover-mockup-1400.webp 1400w,
+                                img/gatsby/cover-mockup-2200.webp 2200w
+                                "
+                        sizes="(max-width: 75em) calc(100vw - 2rem), 1200px"
+                        alt="Opened hardcover book lying on a table, pages down. There is an illustration of a yellow Rolls Royce on the cover with the title 'The Great Gatsby' underneath."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/gatsby/gatsby-pages-600.webp"
+                        data-highres="img/gatsby/gatsby-pages-1000.webp"
+                        srcset= "
+                                img/gatsby/gatsby-pages-400.webp 400w,
+                                img/gatsby/gatsby-pages-1000.webp 1000w,
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Open book on table with pages facing up revealing spread of the last page of a previous chapter on the left and the first page of the next chapter on the right."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>End Result</h3>
+                    <p>I used InDesign for the inner page layouts. I made mockups of the book in Photoshop. I printed my book and saddle stitched it. I felt that I executed my goal well.</p>
+                </div>
+                <div class="text-span fade-in-section">
+                    <p>The Great Gatsby was written by F. Scott Fitzgerald.</p>
+                </div>
+            </div>
+        </div>
+        <div class="next-project">
+            <a href="project-three.html"><h3>&#10229; Cratus</h3></a>
+            <a href="project-one.html"><h3>Fizzy Moods &#10230;</h3></a>
+        </div>
+    </main>
+    <footer>
+        <div class="socials footer-right">
+            <a href="https://www.linkedin.com/in/colin-stubbins/" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.behance.net/colinstubbins3" target="_blank">
+                <i class="fa-brands fa-behance"></i>
+            </a>
+            <a href="https://www.instagram.com/stubbins_designs/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+                <div class="copyright footer-left">
+            <p>&copy; 2025 Colin Stubbins. All rights reserved.</p>
+        </div>
+    </footer>
+    <button id="back-to-top">&#8679;</button>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo-icon.png" type="image/png">
+    <link rel="preload" href="img/logo-w-wordmark.png" as="image">
+    <link rel="preload" href="img/logo-w-wordmark-yellow.png" as="image">
+    <title>Colin Stubbins | Fizzy Moods</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-inner">
+                <a href="index.html" class="nav-branding">
+                    <img id="logo" src="img/logo-w-wordmark.png" alt="Colin Stubbins' personal brand logo">
+                </a>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">WORK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">CONTACT</a>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="project-head fade-in-section">
+            <h1>Fizzy Moods</h1>
+            <h3>Package Design / Branding</h3>
+        </div>
+
+        <div class="gallery project-hero fade-in-section">
+            <img 
+                src="img/fizzy-moods/logo-800.webp" 
+                srcset= "
+                        img/fizzy-moods/logo-800.webp 800w,
+                        img/fizzy-moods/logo-1800.webp 1800w
+                        "
+                sizes="(max-width: 80em) 100vw, 1280px"
+                alt="Fizzy Moods logo is a green and purple wordmark on an overlay with half a starburst shape on top and curved outline on the bottom half. The tagline, 'What's your vibe' is underneath the logo.">
+        </div>
+        
+        <div class="gallery-wrapper">
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Idea</h3>
+                    <p>The goal was to create the brand and packaging for a soda company geared towards kids. From the beginning, I wanted to make the brand relatable. We all go through different emotions, including children. But at that age, they may not understand how common those emotions are. So I felt it could be helpful to explain the different moods in a fun way.</p>
+                </div>
+            </div>
+
+            <div id="lightbox-overlay" class="lightbox hidden">
+                <div class="lightbox-content">
+                    <span id="close-btn">&times;</span>
+                    <img id="lightbox-img" src="" alt="Expanded view" />
+                </div>
+            </div>
+
+            <div class="gallery fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/fizzy-moods/moodboard-400.webp"
+                        data-highres="img/fizzy-moods/moodboard-1200.webp"
+                        srcset= "
+                                img/fizzy-moods/moodboard-400.webp 400w,
+                                img/fizzy-moods/moodboard-800.webp 800w,
+                                img/fizzy-moods/moodboard-1200.webp 1200w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Moodboard of different colourful soda brand bottles and mascots from different candy and cereal brands."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/fizzy-moods/sketches-400.webp"
+                        data-highres="img/fizzy-moods/sketches-1200.webp"
+                        srcset= "
+                                img/fizzy-moods/sketches-400.webp 400w,
+                                img/fizzy-moods/sketches-800.webp 800w,
+                                img/fizzy-moods/sketches-1200.webp 1200w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Sketches of fruit mascots and a sketch of the bottle label layout underneath."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Process</h3>
+                    <p>I began by making a moodboard with other sodas that have a variety of flavours. I also added in some inspiration of zany brand mascots to help me establish the personality and tone of the brand. I then sketched some fruit characters that represent different moods. As a fun idea, I went for alliteration for naming each mascot: Cheery Cherry, Angry Apple, Timid Tangerine, Brave Blueberry, Gloomy Grape, and Loving Lemon. I also sketched a layout for the bottle label to ensure I'm including all the mandatory information along with the mascots and imagery.</p>
+                </div>
+            </div>
+
+            <div class="gallery fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/fizzy-moods/colour-codes-400.webp"
+                        data-highres="img/fizzy-moods/colour-codes-780.webp"
+                        srcset= "
+                                img/fizzy-moods/colour-codes-400.webp 400w,
+                                img/fizzy-moods/colour-codes-780.webp 780w,
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Colour palette with purple, green, black, and white."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/fizzy-moods/font-pairing-400.webp"
+                        data-highres="img/fizzy-moods/font-pairing-780.webp"
+                        srcset= "
+                                img/fizzy-moods/font-pairing-400.webp 400w,
+                                img/fizzy-moods/font-pairing-780.webp 780w,
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Font pairing with Luckiest Guy, Baloo 2, and Frutiger"
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Guidelines</h3>
+                    <p>Because I knew I would end up using many different colours to represent each flavour, I wanted to keep the brand colour scheme simple. I felt pairing purple and green would show a fun and zany tone. These colours also often represent sour and sweet when it comes to flavour, which would accurately describe this soda. Luckiest Guy and Baloo 2 are fun fonts that really captured the fun vibe of the brand.</p>
+                </div>
+            </div>
+
+            <div class="gallery-one fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/fizzy-moods/mascots-400.webp"
+                        data-highres="img/fizzy-moods/mascots-1200.webp"
+                        srcset= "
+                                img/fizzy-moods/mascots-400.webp 400w,
+                                img/fizzy-moods/mascots-800.webp 800w,
+                                img/fizzy-moods/mascots-1200.webp 1200w
+                                "
+                        sizes="(max-width: 75em) calc(100vw - 2rem), 1200px"
+                        alt="Digital illustrations of six fruit mascots layed out in a circle with their respective names under each one: Angry Apple, Cheery Cherry, Loving Lemon, Gloomy Grape, Timid Tangerine, and Brave Blueberry."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Mascots</h3>
+                    <p>I digitally illustrated my sketches in Illustrator and was sure to give them very vibrant colours and a thick black stroke to really ensure they stand out. The colours also enhanced the mood of each mascot. Green can represent envy, that often leads to anger. Red can be very happy and warm. Yellow can be fun, bright, and loving. Purple is dark and can look brooding and sad. Orange can be a colour that represents caution. And blue represents structure and reliability.</p>
+                </div>
+            </div>
+
+            <div class="gallery-one fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/fizzy-moods/labels-800.webp"
+                        data-highres="img/fizzy-moods/labels-1300.webp"
+                        srcset= "
+                                img/fizzy-moods/labels-800.webp 800w,
+                                img/fizzy-moods/labels-1300.webp 1300w
+                                "
+                        sizes="(max-width: 75em) calc(100vw - 2rem), 1200px"
+                        alt="Bottle labels for each flavour"
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="gallery fade-in-section">
+                <div class="project-thumbnail-wrapper" id="bottles">
+                    <img
+                        src="img/fizzy-moods/bottles-400.webp"
+                        data-highres="img/fizzy-moods/bottles-1400.webp"
+                        srcset= "
+                                img/fizzy-moods/bottles-400.webp 400w,
+                                img/fizzy-moods/bottles-650.webp 650w,
+                                img/fizzy-moods/bottles-900.webp 900w,
+                                img/fizzy-moods/bottles-1400.webp 1400w
+                                "
+                        sizes="(max-width: 32em) calc(100vw - 2rem), 480px"
+                        alt="Bottles for each flavour"
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="text-span vertical-center">
+                    <h3>The Bottles and Labels</h3>
+                    <p>I created unique textures for the background of each label representative of each respective mood. The tagline to Fizzy Moods is "What's Your Vibe?" Each flavour asks if you match the mood of the mascot and I placed a fun blurb underneath this explaining the mood in a way kids can relate to. There is also a growing concern for the negative effects of sugar, so I was sure to include notification of the drink's low sugar content in a place that would be immediately seen by the consumer.</p>
+                </div>
+            </div>
+
+            <div class="gallery-one fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/fizzy-moods/six-pack-layouts-800.webp"
+                        data-highres="img/fizzy-moods/six-pack-layouts-2000.webp"
+                        srcset= "
+                                img/fizzy-moods/six-pack-layouts-800.webp 800w,
+                                img/fizzy-moods/six-pack-layouts-1400.webp 1400w,
+                                img/fizzy-moods/six-pack-layouts-2000.webp 2000w
+                                "
+                        sizes="(max-width: 75em) calc(100vw - 2rem), 1200px"
+                        alt="All six flavours' six-pack layouts"
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="gallery-one fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/fizzy-moods/six-pack-variety-layout-800.webp"
+                        data-highres="img/fizzy-moods/six-pack-variety-layout-2000.webp"
+                        srcset= "
+                                img/fizzy-moods/six-pack-variety-layout-800.webp 800w,
+                                img/fizzy-moods/six-pack-variety-layout-1400.webp 1400w,
+                                img/fizzy-moods/six-pack-variety-layout-2000.webp 2000w
+                                "
+                        sizes="(max-width: 75em) calc(100vw - 2rem), 1200px"
+                        alt="Variety pack layout."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="gallery fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/fizzy-moods/prototype-a-400.webp"
+                        data-highres="img/fizzy-moods/prototype-a-2300.webp"
+                        srcset= "
+                                img/fizzy-moods/prototype-a-400.webp 400w,
+                                img/fizzy-moods/prototype-a-800.webp 800w,
+                                img/fizzy-moods/prototype-a-2300.webp 2300w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Variety pack on kitchen counter displaying the flavours Brave Blueberry, Angry Apple, and Cheery Cherry. Tagline, 'What's your vibe?'' is placed along the handle."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="project-thumbnail-wrapper middle-right">
+                    <img
+                        src="img/fizzy-moods/prototype-b-400.webp"
+                        data-highres="img/fizzy-moods/prototype-b-2300.webp"
+                        srcset= "
+                                img/fizzy-moods/prototype-b-400.webp 400w,
+                                img/fizzy-moods/prototype-b-800.webp 800w,
+                                img/fizzy-moods/prototype-b-2300.webp 2300w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="One side of the variety pack is displayed. The Fizzy Moods logo and tagline fill the space on the side of the packaging."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="project-thumbnail-wrapper middle-left">
+                    <img
+                        src="img/fizzy-moods/prototype-c-400.webp"
+                        data-highres="img/fizzy-moods/prototype-c-2300.webp"
+                        srcset= "
+                                img/fizzy-moods/prototype-c-400.webp 400w,
+                                img/fizzy-moods/prototype-c-800.webp 800w,
+                                img/fizzy-moods/prototype-c-2300.webp 2300w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Variety pack on kitchen counter displaying the flavours Timid Tangerine, Gloomy Grape, and Loving Lemon. Tagline, 'What's your vibe?' is placed along the handle."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+                <div class="project-thumbnail-wrapper right">
+                    <img
+                        src="img/fizzy-moods/prototype-d-400.webp"
+                        data-highres="img/fizzy-moods/prototype-d-2300.webp"
+                        srcset= "
+                                img/fizzy-moods/prototype-d-400.webp 400w,
+                                img/fizzy-moods/prototype-d-800.webp 800w,
+                                img/fizzy-moods/prototype-d-2300.webp 2300w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Other side of the variety pack is displayed. The Fizzy Moods logo and tagline fill the space on the side of the packaging."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Six-Pack</h3>
+                    <p>I created a six-pack layout while taking all the precise measurements into consideration. I wanted to ensure that each slot would fit the bottle snug, but not too tight. I made the design for each of the six flavours and a variety pack. I printed, cut, and assembled a prototype of the variety pack to see what it would look like on a kitchen counter. I am very happy with the result. It is vibrant and fun to look at. It would also greatly stand out on a store shelf next to other soda brands.</p>
+                </div>
+            </div>
+
+            <div class="gallery-one fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/fizzy-moods/billboard-400.webp"
+                        data-highres="img/fizzy-moods/billboard-2300.webp"
+                        srcset= "
+                                img/fizzy-moods/billboard-400.webp 400w,
+                                img/fizzy-moods/billboard-800.webp 800w,
+                                img/fizzy-moods/billboard-2300.webp 2300w
+                                "
+                        sizes="(max-width: 75em) calc(100vw - 2rem), 1200px"
+                        alt="Billboard with Fizzy Moods advertisement. 'What's your vibe?' is on the top left with Angry Apple's eyes peering at the viewer underneath. All six bottles are splayed to display the logo on the bottom right."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>End Result</h3>
+                    <p>I learned that marketing towards kids can be delicate, especially when it comes to food and drink products. I feel that I handled this well by effectively demonstrating the different moods and ensuring that it's immediately pointed out that the product contains sugar. Overall, I found that when I'm working on a project that I'm having a lot of fun with, it really translates into the design itself.</p>
+                </div>
+            </div>
+
+            <div class="gallery-one fade-in-section">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube-nocookie.com/embed/8xENNwydB5A"
+                        loading="lazy"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>Bonus: AR Experience</h3>
+                    <p>As an experimental extension of the brand, I brought some of my characters to life through augmented reality. To see how I did this, check out the <a href="https://medium.com/@colin.stubbins/how-to-make-brand-mascots-on-packaging-talk-using-ai-ad03ed3fa8b5" target="_blank" rel="noopener noreferrer">tutorial article</a> I published on Medium.</p>
+                </div>
+            </div>
+        </div>
+        <div class="next-project">
+            <a href="project-four.html"><h3>&#10229; Great Gatsby</h3></a>
+            <a href="project-two.html"><h3>Low Road &#10230;</h3></a>
+        </div>
+    </main>
+    <footer>
+        <div class="socials footer-right">
+            <a href="https://www.linkedin.com/in/colin-stubbins/" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.behance.net/colinstubbins3" target="_blank">
+                <i class="fa-brands fa-behance"></i>
+            </a>
+            <a href="https://www.instagram.com/stubbins_designs/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+                <div class="copyright footer-left">
+            <p>&copy; 2025 Colin Stubbins. All rights reserved.</p>
+        </div>
+    </footer>
+    <button id="back-to-top">&#8679;</button>
+    <script src="script.js"></script>
+</body>
+</html>

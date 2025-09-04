@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo-icon.png" type="image/png">
+    <link rel="preload" href="img/logo-w-wordmark.png" as="image">
+    <link rel="preload" href="img/logo-w-wordmark-yellow.png" as="image">
+    <title>Colin Stubbins | Contact Me</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-inner">
+                <a href="index.html" class="nav-branding">
+                    <img id="logo" src="img/logo-w-wordmark.png" alt="Colin Stubbins' personal brand logo">
+                </a>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">WORK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">CONTACT</a>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="gallery-wrapper fade-in-section">
+            <h1>Contact Me</h1>
+        </div>
+        <form action="https://formspree.io/f/xwpqdand" method="POST" class="gallery-wrapper fade-in-section" id="contact-form">
+            <div class="gallery" id="form-gallery">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" autocomplete="name" required>
+                    <label for="name">Name*</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                    <label for="email">Email*</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <textarea id="message" name="message" rows="5" autocomplete="off" required></textarea>
+                <label for="message">Message*</label>
+            </div>
+            
+            <button type="submit" class="button-left-align">SEND</button>
+
+            <!-- Success/Error messages -->
+            <p id="form-status" class="left-align"></p>
+            <p id="email" class="left-align">Or email me directly at <a href="mailto:colin@colinstubbins.ca">colin@colinstubbins.ca</a></p>
+        </form>
+    </main>
+    <footer>
+        <div class="socials footer-right">
+            <a href="https://www.linkedin.com/in/colin-stubbins/" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.behance.net/colinstubbins3" target="_blank">
+                <i class="fa-brands fa-behance"></i>
+            </a>
+            <a href="https://www.instagram.com/stubbins_designs/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+                <div class="copyright footer-left">
+            <p>&copy; 2025 Colin Stubbins. All rights reserved.</p>
+        </div>
+    </footer>
+    <button id="back-to-top">&#8679;</button>
+    <script src="script.js"></script>
+</body>
+</html>
