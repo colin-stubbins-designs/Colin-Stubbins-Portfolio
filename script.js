@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.getElementById("lightbox-overlay");
   const lightboxImg = document.getElementById("lightbox-img");
   const closeBtn = document.getElementById("close-btn");
-  const imageWrapper = document.querySelector(".lightbox-image-wrapper");
   const lightboxContent = document.querySelector(".lightbox-content");
 
   if (!lightbox || !lightboxImg || !closeBtn || thumbnails.length === 0) return;
@@ -131,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function closeLightbox() {
     lightbox.classList.add("hidden");
     document.body.classList.remove("no-scroll");
-    lightboxImg.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
+    lightboxImg.src = "";
     resetZoomAndPan();
   }
 
@@ -310,7 +309,6 @@ const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target); // Optional: only fade in once
     }
   });
 }, {
