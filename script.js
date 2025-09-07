@@ -131,8 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function closeLightbox() {
     lightbox.classList.add("hidden");
     document.body.classList.remove("no-scroll");
-    // lightboxImg.src = "";
-    lightboxImg.removeAttribute("src");
+    lightboxImg.src = "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
     resetZoomAndPan();
   }
 
