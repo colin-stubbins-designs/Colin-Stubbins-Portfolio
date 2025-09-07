@@ -468,11 +468,11 @@ button:hover {
     padding-bottom: 1rem;
 }
 
-.text-span a, #email a {
+.text-span a, #my-email a {
     color: blue;
 }
 
-.text-span a:hover, #email a:hover {
+.text-span a:hover, #my-email a:hover {
     color: #dcaf27;
     text-decoration: underline;
 }
