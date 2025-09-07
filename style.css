@@ -229,10 +229,6 @@ main {
     gap: 1rem;
 }  
 
-/* .gallery-wrapper {
-    gap: 1rem;
-} */
-
 .gallery-wrapper h1, h2{
     text-align: center;
 }
@@ -293,9 +289,7 @@ main {
     position: absolute;
     bottom: 7%;
     left: 7%;
-    /* transform: translate(-50%, -50%); */
     z-index: 2;
-    /* text-align: center; */
     color: white;
     opacity: 1;
     pointer-events: none;
@@ -304,7 +298,6 @@ main {
 .overlay h3, .overlay p {
     margin: 0;
     padding: 0.2em 0;
-    /* font-size: 1rem; */
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }  
 
@@ -360,7 +353,6 @@ main {
 
 #skills li {
   list-style: disc;
-  /* margin-left: .5rem; adds spacing so bullets don't hit the edge */
 }
 
 #skills ul {
@@ -381,13 +373,10 @@ main {
     gap: 2rem;
 }
 
-/* Container for each field */
 .form-group {
   position: relative;
-  /* margin-bottom: 1.5rem; */
 }
 
-/* Inputs & textarea */
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -399,7 +388,6 @@ main {
   background: none;
 }
 
-/* Label styles */
 .form-group label {
   position: absolute;
   left: 12px;
@@ -408,11 +396,10 @@ main {
   font-size: var(--body-text);
   pointer-events: none;
   transition: 0.2s ease all;
-  background: rgb(250, 250, 246); /* prevents text overlap */
+  background: rgb(250, 250, 246);
   padding: 0 4px;
 }
 
-/* Floating effect: move label up when input has focus or value */
 .form-group input:focus + label,
 .form-group textarea:focus + label,
 .form-group input:not(:placeholder-shown) + label,
@@ -423,7 +410,6 @@ main {
   color: #1c234f;
 }
 
-/* Button styling */
 button {
   padding: 10px 20px;
   border: none;
@@ -459,21 +445,20 @@ button:hover {
 .project-hero {
     max-width: 80rem;
     margin: 0 auto;
-    overflow: hidden;            /* hides the cropped parts of the image */
+    overflow: hidden;
     display: flex;
-    justify-content: center;     /* horizontally center if needed */
-    align-items: center;         /* vertically center image */
+    justify-content: center;
+    align-items: center;
 }
 
 .project-hero img {
   min-height: 12rem;
-  width: 100%;                 /* maintain original width */
+  width: 100%;
   object-fit: cover;
 }
 
 .text-span {
   max-width: 60em;
-  /* padding: 0.5rem 1rem 0 1rem; */
   padding-top: 0.5rem;
   margin: 0 auto;
   box-sizing: border-box;
@@ -494,7 +479,7 @@ button:hover {
 
 .video-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
 }
@@ -513,15 +498,12 @@ button:hover {
 
 .project-thumbnail {
   cursor: pointer;
-  /* margin: 10px; */
   width: 100%;
   transition: transform 0.3s ease;
   display: block;
-  /* filter: brightness(1); */
 }
 
 .project-thumbnail:hover {
-    /* filter: brightness(1.2); */
     transform: scale(1.05);
 }
 
@@ -791,7 +773,6 @@ body.no-scroll #back-to-top {
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        /* padding-bottom: 100%; */
     }
     
     .hamburger {
