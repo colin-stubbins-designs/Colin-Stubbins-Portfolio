@@ -1,8 +1,9 @@
 :root {
     --font-ratio: 1;
-    --intro-heading: calc(2.5rem * var(--font-ratio));
+    --intro-heading: calc(3rem * var(--font-ratio));
     --pitch: calc(1.12rem * var(--font-ratio));
     --primary-heading: calc(2rem * var(--font-ratio));
+    --pitch-line-height: calc(2.12rem * var(--font-ratio));
     --secondary-heading: calc(1.5rem * var(--font-ratio));
     --tertiary-heading: calc(1.15rem * var(--font-ratio));
     --thumbnail-heading: calc(1.25rem * var(--font-ratio));
@@ -201,20 +202,23 @@ main {
 .pitch-sentence {
     text-align: center;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
 }
 
 .pitch-sentence h1 {
     font-size: var(--intro-heading);
-    line-height: 4rem;
+    line-height: 4.5rem;
+    padding-bottom: 2rem;
 }
 
 .pitch-sentence p {
     font-size: var(--pitch);
     font-style: italic;
-    max-width: 45rem;
+    max-width: 35rem;
     margin: 0 auto;
-    line-height: 3rem;
+    line-height: var(--pitch-line-height);
+    border-top: 2px solid #1c234f;
+    border-bottom: 2px solid #1c234f;
 }
 
 .gallery-wrapper {
@@ -605,6 +609,7 @@ footer {
     justify-content: space-between;
     margin: 0 auto;
     color: #1c234f;
+    margin-top: 1rem;
     padding: 4rem 0 2rem 0;
 }
 
