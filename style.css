@@ -763,6 +763,10 @@ footer p {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    .project-hero {
+        max-width: 100rem;
+    }
+
 }
 
 @media screen and (max-width:48em) {
