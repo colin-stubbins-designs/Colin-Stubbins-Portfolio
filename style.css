@@ -216,7 +216,7 @@ main {
     border-bottom: 2px solid #1c234f;
 }
 
-.gallery-wrapper {
+.gallery-wrapper, .home-gallery-wrapper {
     max-width: 75rem;
     margin: 0 auto;
     padding: 1rem;
@@ -224,11 +224,16 @@ main {
     gap: 1rem;
 }  
 
+/* .gallery-wrapper {
+    max-width: 75rem;
+} */
+
+
 .gallery-wrapper h1, h2{
     text-align: center;
 }
 
-.gallery, .gallery-one, .gallery-three {
+.gallery, .gallery-one, .gallery-three, .home-gallery {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -643,7 +648,7 @@ footer p {
         max-width: 18rem;
     }    
 
-    .gallery {
+    .gallery, .home-gallery {
         grid-template-columns: 1fr 1fr;
     }   
 
@@ -744,6 +749,18 @@ footer p {
 
     :root {
         --font-ratio: 1.414
+    }
+
+}
+
+@media screen and (min-width:100em) {
+
+    .home-gallery-wrapper {
+        max-width: none;
+    }
+
+    .home-gallery {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
 }
