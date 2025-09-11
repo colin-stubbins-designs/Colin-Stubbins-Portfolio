@@ -752,7 +752,8 @@ footer p {
     }
 
     #back-to-top:focus {
-        outline: none;
+        outline: 2px solid #1c234f;
+        outline-offset: 4px;
     }
 
 }
