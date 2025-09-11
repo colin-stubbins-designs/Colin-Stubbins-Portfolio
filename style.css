@@ -442,7 +442,7 @@ button:hover {
     padding: 2rem 1rem;
 }
 
-.project-hero {
+.project-hero, .project-hero-wide {
     max-width: 80rem;
     margin: 0 auto;
     overflow: hidden;
@@ -451,10 +451,13 @@ button:hover {
     align-items: center;
 }
 
-.project-hero img {
-  min-height: 12rem;
+.project-hero img, .project-hero-wide img {
   width: 100%;
   object-fit: cover;
+}
+
+.project-hero img {
+  min-height: 12rem;
 }
 
 .text-span {
@@ -763,7 +766,7 @@ footer p {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
-    .project-hero {
+    .project-hero, .project-hero-wide {
         max-width: 100rem;
     }
 
