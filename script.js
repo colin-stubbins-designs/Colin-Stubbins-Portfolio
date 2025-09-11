@@ -123,6 +123,9 @@ document.addEventListener("DOMContentLoaded", () => {
       lightbox.classList.remove("hidden");
       document.body.classList.add("no-scroll");
       resetZoomAndPan();
+
+      // Hide Back to Top when lightbox is open
+      if (backToTopButton) backToTopButton.style.display = "none";
     });
   });
 
@@ -132,6 +135,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("no-scroll");
     lightboxImg.src = "";
     resetZoomAndPan();
+
+    // Show Back to Top again
+    if (backToTopButton) backToTopButton.style.display = "";
   }
 
   closeBtn.addEventListener("click", closeLightbox);
