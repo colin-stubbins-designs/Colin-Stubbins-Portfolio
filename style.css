@@ -20,10 +20,17 @@
     box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;       /* full viewport height */
+  margin: 0;          /* remove default spacing */
+}
+
 body {
     background-color: rgb(250, 250, 246);
     color: #1c234f;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3 {
@@ -180,6 +187,7 @@ nav ul li a:hover::after {
 
 main {
     padding-top: 6rem;
+    flex: 1;
 }
 
 .fade-in-section {
@@ -223,11 +231,6 @@ main {
     display: grid;
     gap: 1rem;
 }  
-
-/* .gallery-wrapper {
-    max-width: 75rem;
-} */
-
 
 .gallery-wrapper h1, h2{
     text-align: center;
@@ -591,11 +594,12 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     margin: 0 auto;
     color: #1c234f;
     margin-top: 1rem;
     padding: 4rem 0 2rem 0;
+    flex-shrink: 0;
+    width: 100%;
 }
 
 footer p {
@@ -708,6 +712,8 @@ footer p {
 
     footer {
         flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         padding: 4rem 8rem 2rem 8rem;
     }
 
