@@ -23,6 +23,7 @@
 html, body {
   height: 100%;       /* full viewport height */
   margin: 0;          /* remove default spacing */
+  scroll-behavior: smooth;
 }
 
 body {
