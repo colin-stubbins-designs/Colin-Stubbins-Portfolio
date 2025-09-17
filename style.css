@@ -751,7 +751,7 @@ footer p {
         pointer-events: auto;
     }
 
-    #back-to-top:focus {
+    #back-to-top:focus-visible {
         outline: 2px solid #1c234f;
         outline-offset: 4px;
     }
