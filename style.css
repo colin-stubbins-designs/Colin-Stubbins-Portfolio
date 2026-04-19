@@ -14,6 +14,14 @@
     --footer-text: calc(0.875rem * var(--font-ratio));
 }
 
+@font-face {
+  font-family: "Dukes";
+  src: url("font/Dukes.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -214,6 +222,7 @@ main {
 
 .pitch-sentence h1 {
     font-size: var(--intro-heading);
+    font-family: 'Dukes';
     line-height: 4.5rem;
     padding-bottom: 2rem;
 }
