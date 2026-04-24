@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo-icon.png" type="image/png">
+    <link rel="preload" href="img/logo-w-wordmark.png" as="image">
+    <link rel="preload" href="img/logo-w-wordmark-yellow.png" as="image">
+    <title>Colin Stubbins | Dukes</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-inner">
+                <a href="index.html" class="nav-branding">
+                    <img id="logo" src="img/logo-w-wordmark.png" alt="Colin Stubbins' personal brand logo">
+                </a>
+
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">WORK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">CONTACT</a>
+                    </li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="project-head fade-in-section">
+            <h1>Dukes</h1>
+            <h3>Type Design</h3>
+        </div>
+
+        <div class="gallery project-hero-wide fade-in-section">
+            <img 
+                src="img/dukes/logo-800.webp" 
+                srcset= "
+                        img/dukes/logo-800.webp 800w,
+                        img/dukes/logo-1800.webp 1800w
+                        "
+                sizes="(max-width: 80em) 100vw, 1280px"
+                alt="dukes nameplate is written in red angular text to look like slash marks in front of a black background.">
+        </div>
+        
+        <div class="gallery-wrapper">
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Idea</h3>
+                    <p>The goal was to create a slab serif typeface suitable for the head and subhead of a movie poster. The movie I designed this typeface around is Rocky. This typeface should be applicable for any promotional purposes.</p>
+                </div>
+            </div>
+
+            <div id="lightbox-overlay" class="lightbox hidden">
+                <div class="lightbox-content">
+                    <span id="close-btn">&times;</span>
+                    <img id="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Expanded view" >
+                </div>
+            </div>
+
+            <div class="gallery-one fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/dukes/moodboard-1000.webp"
+                        data-highres="img/dukes/moodboard-1800.webp"
+                        srcset= "
+                                img/dukes/moodboard-1000.webp 1000w,
+                                img/dukes/moodboard-1800.webp 1800w
+                                "
+                        sizes="(max-width: 75em) calc(100vw - 2rem), 1200px"
+                        alt="Different steps of the logo's creation with the hand drawn sketch on top, the red digital illustration in the middle, and the digital illustration in front of a black background on the bottom."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Guidelines</h3>
+                    <p>I used the typeface in the original Rocky poster as inspiration. I also analyzed the headings on old and current boxing flyers. I wanted to apply a similar blocky appearance as these examples for the typeface characters. When assessing the flyers, I noticed a trend in the use of thick serifs. This gives the letters the appearance of having very sturdy footing like a boxer. I also found the blocky serifs give interesting shapes within the apertures between each pair of letters. This inspired me to create my own version of these serifs. Varsity is the font used on sports jerseys and applies these serifs. I used this font as inspiration for serif placement on the capital letters. I also found inspiration from Baskerville Serial Heavy’s use of contrasting strokes with the thinner horizontal strokes accentuating the thicker vertical strokes further giving off the appearance of sturdiness.</p>
+                </div>
+            </div>
+
+            <div class="gallery-one fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/dukes/sketches-600.webp"
+                        data-highres="img/dukes/sketches-3000.webp"
+                        srcset= "
+                                img/dukes/sketches-600.webp 600w,
+                                img/dukes/sketches-1200.webp 1200w,
+                                img/dukes/sketches-3000.webp 3000w
+                                "
+                        sizes="(max-width: 75em) calc(100vw - 2rem), 1200px"
+                        alt="Different steps of the logo's creation with the hand drawn sketch on top, the red digital illustration in the middle, and the digital illustration in front of a black background on the bottom."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Process</h3>
+                    <p>I sketched all the upper and lowercase letters, numbers, question mark, ampersand, and at sign on dot matrix paper. I took a very different approach to Varsity’s polygonal edges and used a lot of bezier curves to connect the serifs and to maintain some roundness in characters that typically have curved edges, such as the ‘O’, while maintaining a square, blocky appearance. These curves create a biological look like connected muscles, maintaining the theme of strength and sturdiness. I designed the capital letters to look very tall and monumental. I set the x-height to be 70% of the cap-height in order to make the capital letters tower over the lowercase letters by comparison. The lowercase letters have the appearance of being slightly more rounded due to their size, but still maintain a blocky, sturdy effect. The ascenders reach exactly cap-height to make lines of text look more militant and structured. The descenders are 25% of the cap-height, which maintains the blocky look without interfering with the line of text below.</p>
+                </div>
+            </div>
+
+            <div class="gallery-one fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/dukes/digital-font-600.webp"
+                        data-highres="img/dukes/digital-font-3000.webp"
+                        srcset= "
+                                img/dukes/digital-font-600.webp 600w,
+                                img/dukes/digital-font-1200.webp 1200w,
+                                img/dukes/digital-font-3000.webp 3000w
+                                "
+                        sizes="(max-width: 75em) calc(100vw - 2rem), 1200px"
+                        alt="Different steps of the logo's creation with the hand drawn sketch on top, the red digital illustration in the middle, and the digital illustration in front of a black background on the bottom."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Typeface</h3>
+                    <p>I digitally illustrated all of my sketches in Adobe Illustrator. This gave me more control over the consistency of the bezier curves and stroke widths. I adjusted some of the apertures in certain characters such as the capital ‘H’ by making more space between the stems. This prevents the inner brackets from being too close and looking tight and closed off at a smaller font size. I also added more punctuation. I minimized the anchor points for each character and imported them all into Glyphs to make the typeface a fully functional OpenType font. During this process, I kerned, spaced, and character mapped to ensure the font has easy readability when typed. Because this typeface is thick, I chose to make the kerning tight to ensure the words aren’t too wide. This also makes the letters look more unionized and stronger in numbers, which contributes to the strength theme. I named the font “Dukes” to fit in with the theme of boxing.</p>
+                </div>
+            </div>
+
+            <div class="gallery fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/dukes/poster-layout-600.webp"
+                        data-highres="img/dukes/poster-layout-3000.webp"
+                        srcset= "
+                                img/dukes/poster-layout-600.webp 600w,
+                                img/dukes/poster-layout-1200.webp 1200w,
+                                img/dukes/poster-layout-3000.webp 3000w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Prototype of the zine open face-up to display the end of an article on the left page and the beginning of the next article on the right. Font pairings, ink illustrations, and a black and white photo are all within the layouts shown. All is presented on a wood table surface."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    >
+                </div>
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/dukes/mockup-poster-600.webp"
+                        data-highres="img/dukes/mockup-poster-3000.webp"
+                        srcset= "
+                                img/dukes/mockup-poster-600.webp 600w,
+                                img/dukes/mockup-poster-1200.webp 1200w,
+                                img/dukes/mockup-poster-3000.webp 3000w
+                                "
+                        sizes="(max-width: 47.99em) 85vw, (min-width: 75em) 576px, 45vw"
+                        alt="Prototype of the zine open face-up to display the end of an article on the left page and the beginning of the next article on the right. Font pairings, ink illustrations, and a black and white photo are all within the layouts shown. All is presented on a wood table surface."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>The Poster</h3>
+                    <p>I modernized the original Rocky poster using Dukes for the title, tagline, and release time. I used Univers Ultra Condensed to fit in the credits. These fonts pair well with the extreme contrast of the heavy Dukes and the light Univers. I created a texture effect in Photoshop to make the title, which is the main character’s name, look like it was printed on the glove and worn down from use. It’s a gritty movie, so I wanted the poster to have a gritty atmosphere. The title, Rocky, is also the first thing the eye is drawn to because it’s in all caps and significantly larger than the rest of the text on the poster. I made the tagline only capitalized with the majority of the letters being lowercase to make it less hierarchal to the title to make up for it being on the top of the poster. This also helps to showcase the flow of the lowercase letters and readability of the typeface.</p>
+                </div>
+            </div>
+
+            <div class="gallery-one fade-in-section">
+                <div class="project-thumbnail-wrapper">
+                    <img
+                        src="img/dukes/prototype-600.webp"
+                        data-highres="img/dukes/prototype-3000.webp"
+                        srcset= "
+                                img/dukes/prototype-600.webp 600w,
+                                img/dukes/prototype-1200.webp 1200w,
+                                img/dukes/prototype-3000.webp 3000w
+                                "
+                        sizes="(max-width: 75em) calc(100vw - 2rem), 1200px"
+                        alt="Different steps of the logo's creation with the hand drawn sketch on top, the red digital illustration in the middle, and the digital illustration in front of a black background on the bottom."
+                        class="project-thumbnail"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+
+            <div class="text-span-wrapper">
+                <div class="text-span fade-in-section">
+                    <h3>End Result</h3>
+                    <p>I’ve created a typeface that could be used in many different promotional contexts. It stands out among most other fonts, while remaining serious and structured. I learned that consistency is key when designing a typeface. Consistent strokes, curves, and serifs are what makes it readable and visually appealing. I also learned a lot about kerning, such as the difference between how a capital ‘A’ and a capital ’T’ should be spaced compared to two capital ‘H’s. Overall, designing this font gave me a whole new love for typography and was a great exercise in applying my typographic skills.</p>
+                </div>
+                <div class="text-span fade-in-section">
+                    <p>*Disclaimer: Freddy Krueger was created by Wes Craven and is owned by the Wes Craven Estate. Jason Voorhees was originally created by Victor Miller; adult Jason and franchise elements are owned by Horror Inc. Movie Maniacs is owned by McFarlane Toys. I am not affiliated with any of these entities. This is a concept project.</p>
+                </div>
+            </div>
+        </div>
+        <div class="next-project">
+            <a href="rolling-stone.html"><h3>&#10229; Rolling Stone</h3></a>
+            <a href="cratus.html"><h3>Cratus &#10230;</h3></a>
+        </div>
+    </main>
+    <footer>
+        <div class="socials footer-right">
+            <a href="https://www.linkedin.com/in/colin-stubbins/" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.behance.net/colinstubbins3" target="_blank">
+                <i class="fa-brands fa-behance"></i>
+            </a>
+            <a href="https://www.instagram.com/stubbins_designs/" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+                <div class="copyright footer-left">
+            <p>&copy; 2025 Colin Stubbins. All rights reserved.</p>
+        </div>
+    </footer>
+    <button id="back-to-top" aria-label="Back to top">
+        <span aria-hidden="true">&#8679;</span>
+    </button>
+    <script src="script.js"></script>
+</body>
+</html>

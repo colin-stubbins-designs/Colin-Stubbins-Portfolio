@@ -671,6 +671,7 @@ footer p {
 
     .gallery, .home-gallery {
         grid-template-columns: 1fr 1fr;
+        align-items: center;
     }   
 
     .gallery-three {
@@ -706,7 +707,6 @@ footer p {
     }
 
     .vertical-center {
-        margin: auto 0;
         padding: 0 3rem;
     }
 
