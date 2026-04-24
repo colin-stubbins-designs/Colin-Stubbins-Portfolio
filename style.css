@@ -9,6 +9,7 @@
     --thumbnail-heading: calc(1.25rem * var(--font-ratio));
     --head-details: calc(1rem * var(--font-ratio));
     --body-text: calc(1rem * var(--font-ratio));
+    --disclaimer: calc(0.75rem * var(--font-ratio));
     --skill-head: calc(1.1rem * var(--font-ratio));
     --next-project: calc(1.2rem * var(--font-ratio));
     --footer-text: calc(0.875rem * var(--font-ratio));
@@ -76,6 +77,10 @@ p {
     margin-bottom: 1rem;
     font-weight: normal;
     font-size: var(--body-text);
+}
+
+.disclaimer p {
+    font-size: var(--disclaimer);
 }
 
 header {
