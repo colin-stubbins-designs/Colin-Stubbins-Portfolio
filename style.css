@@ -745,15 +745,21 @@ footer p {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 4rem 8rem 2rem 8rem;
+        padding: 4rem 7rem 2rem 7rem;
     }
 
     .footer-left {
         order: 1;
     }
 
-    .footer-right {
+    .footer-middle {
         order: 2;
+        margin: 0 1em;
+        text-align: center;
+    }
+
+    .footer-right {
+        order: 3;
     }
 
     #back-to-top {
