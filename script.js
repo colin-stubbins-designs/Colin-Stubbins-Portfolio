@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
   const preloader = document.getElementById("preloader");
 
-  // safety check
+  // If no preloader on this page → do nothing (scroll works normally)
   if (!preloader) return;
 
   const hasSeenPreloader = sessionStorage.getItem("preloaderShown");
 
   if (!hasSeenPreloader) {
+
+    // lock scroll ONLY when preloader is active
+    document.body.classList.add("no-scroll");
 
     const animation = lottie.loadAnimation({
       container: document.getElementById('lottie-container'),
@@ -18,26 +21,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     animation.addEventListener('complete', () => {
 
-      // small delay for polish
       setTimeout(() => {
         preloader.classList.add('fade-out');
-        document.body.classList.add('loaded');
+
+        // unlock scroll
+        document.body.classList.remove("no-scroll");
 
         setTimeout(() => {
           preloader.style.display = 'none';
-        }, 600); // matches CSS transition
+        }, 600);
 
       }, 200);
 
     });
 
-    // mark as shown for this session
     sessionStorage.setItem("preloaderShown", "true");
 
   } else {
-    // skip preloader entirely
+    // skip preloader → ensure scroll is enabled
     preloader.style.display = 'none';
-    document.body.classList.add('loaded');
+    document.body.classList.remove("no-scroll");
   }
 });
 
