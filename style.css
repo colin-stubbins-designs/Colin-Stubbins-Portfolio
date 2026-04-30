@@ -692,10 +692,6 @@ footer p {
         max-width: 15rem;
     }   
     
-    #lottie-container {
-        width: 10rem;
-    }
-
     #skills {
         grid-template-columns: 1fr 1fr;
     }
@@ -719,6 +715,10 @@ footer p {
     #logo {
         max-width: 18rem;
     }    
+
+    #lottie-container {
+        width: 10rem;
+    }
 
     .gallery, .home-gallery {
         grid-template-columns: 1fr 1fr;
