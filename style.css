@@ -544,6 +544,11 @@ button:hover {
     text-decoration: underline;
 }
 
+.side-pic {
+    max-width: 60em;
+    margin: 0 auto;
+}
+
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%;
@@ -577,6 +582,20 @@ button:hover {
 #bottles {
     max-width: 30rem;
     margin: 0 auto;
+}
+
+#carousel {
+    margin: 0 auto;
+    background-color: rgb(250, 250, 246);
+    overflow: hidden;
+}
+
+#carousel video {
+    display: block;
+    width: 100%;
+    max-width: 25rem;
+    align-items: center;
+    margin-bottom: -2px;
 }
 
 .lightbox {
