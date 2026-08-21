@@ -325,7 +325,7 @@ main {
 
 .marquee-content img {
     display: block;
-    width: 300px;
+    width: 350px;
     aspect-ratio: 4/3;
     object-fit: cover;
 }
@@ -755,10 +755,6 @@ footer p {
     #logo {
         max-width: 15rem;
     }   
-
-    .marquee-content img {
-        width: 325px;
-    }
     
     #skills {
         grid-template-columns: 1fr 1fr;
@@ -786,10 +782,6 @@ footer p {
 
     #lottie-container {
         width: 10rem;
-    }
-
-    .marquee-content img {
-        width: 350px;
     }
 
     .gallery, .home-gallery {
