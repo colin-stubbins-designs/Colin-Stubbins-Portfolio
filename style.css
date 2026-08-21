@@ -285,6 +285,51 @@ main {
     border-bottom: 2px solid #1c234f;
 }
 
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 1rem;
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    will-change: transform;
+}
+
+.marquee-content li {
+    flex-shrink: 0;
+}
+
+.marquee-content a {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.marquee-content a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0);
+    transition: background-color 0.25s ease;
+    pointer-events: none;
+}
+
+.marquee-content a:hover::after {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.marquee-content img {
+    display: block;
+    width: 250px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
 .gallery-wrapper, .home-gallery-wrapper {
     max-width: 75rem;
     margin: 0 auto;
@@ -710,6 +755,10 @@ footer p {
     #logo {
         max-width: 15rem;
     }   
+
+    .marquee-content img {
+        width: 300px;
+    }
     
     #skills {
         grid-template-columns: 1fr 1fr;
@@ -737,6 +786,10 @@ footer p {
 
     #lottie-container {
         width: 10rem;
+    }
+
+    .marquee-content img {
+        width: 350px;
     }
 
     .gallery, .home-gallery {
@@ -857,6 +910,10 @@ footer p {
 }
 
 @media screen and (min-width:100em) {
+
+    .marquee-content img {
+        width: 400px;
+    }
 
     .home-gallery-wrapper {
         max-width: none;

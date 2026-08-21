@@ -138,6 +138,105 @@ backToTopButton?.addEventListener("click", () => {
   }
 });
 
+// ======= Marquee =======
+
+const marquee = document.querySelector(".marquee");
+const marqueeContent = document.querySelector(".marquee-content");
+
+const speed = 60; // pixels per second
+
+if (marquee && marqueeContent) {
+
+    // Get the original projects
+    const originalItems = Array.from(marqueeContent.children);
+
+    // Duplicate the projects once
+    originalItems.forEach(item => {
+        const clone = item.cloneNode(true);
+
+        clone.classList.add("marquee-clone");
+        clone.setAttribute("aria-hidden", "true");
+
+        const link = clone.querySelector("a");
+
+        if (link) {
+            link.setAttribute("tabindex", "-1");
+        }
+
+        marqueeContent.appendChild(clone);
+    });
+
+
+    let position = 0;
+    let lastTime = null;
+    let setWidth = 0;
+    let isPaused = false;
+
+
+    function measureMarquee() {
+
+        // The content now contains two identical sets.
+        // Half its width is the distance of one set.
+        setWidth = marqueeContent.scrollWidth / 2;
+
+    }
+
+
+    function animateMarquee(timestamp) {
+
+        if (lastTime === null) {
+            lastTime = timestamp;
+        }
+
+        const elapsed = timestamp - lastTime;
+        lastTime = timestamp;
+
+
+        if (!isPaused && setWidth > 0) {
+
+            // Move according to actual elapsed time
+            position -= speed * (elapsed / 1000);
+
+            // Once we've travelled one complete set,
+            // wrap the position without changing what is visible.
+            if (position <= -setWidth) {
+                position += setWidth;
+            }
+
+            marqueeContent.style.transform =
+                `translate3d(${position}px, 0, 0)`;
+        }
+
+        requestAnimationFrame(animateMarquee);
+    }
+
+
+    // Pause while hovering
+    marquee.addEventListener("mouseenter", () => {
+        isPaused = true;
+    });
+
+    marquee.addEventListener("mouseleave", () => {
+        isPaused = false;
+    });
+
+
+    // Wait until all images have loaded
+    window.addEventListener("load", () => {
+
+        measureMarquee();
+
+        requestAnimationFrame(animateMarquee);
+
+    });
+
+
+    // Recalculate width if the window changes size.
+    // This does NOT remove or recreate anything.
+    window.addEventListener("resize", measureMarquee);
+
+}
+
 // ======= Lightbox =======
 
 document.addEventListener("DOMContentLoaded", () => {
