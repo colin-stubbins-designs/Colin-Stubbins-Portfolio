@@ -325,7 +325,7 @@ main {
 
 .marquee-content img {
     display: block;
-    width: 250px;
+    width: 300px;
     aspect-ratio: 4/3;
     object-fit: cover;
 }
@@ -757,7 +757,7 @@ footer p {
     }   
 
     .marquee-content img {
-        width: 300px;
+        width: 325px;
     }
     
     #skills {
