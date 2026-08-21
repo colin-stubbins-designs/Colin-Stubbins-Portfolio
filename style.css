@@ -325,7 +325,7 @@ main {
 
 .marquee-content img {
     display: block;
-    width: 350px;
+    width: 400px;
     aspect-ratio: 4/3;
     object-fit: cover;
 }
@@ -903,9 +903,9 @@ footer p {
 
 @media screen and (min-width:100em) {
 
-    .marquee-content img {
+    /* .marquee-content img {
         width: 400px;
-    }
+    } */
 
     .home-gallery-wrapper {
         max-width: none;
