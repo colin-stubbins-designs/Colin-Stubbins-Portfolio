@@ -325,7 +325,7 @@ main {
 
 .marquee-content img {
     display: block;
-    width: 400px;
+    width: 200px;
     aspect-ratio: 4/3;
     object-fit: cover;
 }
@@ -755,6 +755,10 @@ footer p {
     #logo {
         max-width: 15rem;
     }   
+
+    .marquee-content img {
+        width: 300px;
+    }
     
     #skills {
         grid-template-columns: 1fr 1fr;
@@ -782,6 +786,10 @@ footer p {
 
     #lottie-container {
         width: 10rem;
+    }
+
+    .marquee-content img {
+        width: 400px;
     }
 
     .gallery, .home-gallery {
@@ -903,9 +911,9 @@ footer p {
 
 @media screen and (min-width:100em) {
 
-    /* .marquee-content img {
-        width: 400px;
-    } */
+    .marquee-content img {
+        width: 450px;
+    }
 
     .home-gallery-wrapper {
         max-width: none;

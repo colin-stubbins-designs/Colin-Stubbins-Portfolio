@@ -143,15 +143,17 @@ backToTopButton?.addEventListener("click", () => {
 const marquee = document.querySelector(".marquee");
 const marqueeContent = document.querySelector(".marquee-content");
 
-const speed = 60; // pixels per second
+const speed = 60;        // pixels per second
+const resumeDelay = 2000; // resume after 2 seconds of inactivity
 
 if (marquee && marqueeContent) {
 
-    // Get the original projects
+    // ===== Duplicate the original projects once =====
+
     const originalItems = Array.from(marqueeContent.children);
 
-    // Duplicate the projects once
     originalItems.forEach(item => {
+
         const clone = item.cloneNode(true);
 
         clone.classList.add("marquee-clone");
@@ -167,20 +169,54 @@ if (marquee && marqueeContent) {
     });
 
 
+    // ===== Variables =====
+
     let position = 0;
     let lastTime = null;
     let setWidth = 0;
-    let isPaused = false;
 
+    let isPaused = false;
+    let isDragging = false;
+    let hasDragged = false;
+
+    let dragStartX = 0;
+    let dragStartPosition = 0;
+
+    let resumeTimer = null;
+
+
+    // ===== Measure the width of one complete set =====
 
     function measureMarquee() {
-
-        // The content now contains two identical sets.
-        // Half its width is the distance of one set.
         setWidth = marqueeContent.scrollWidth / 2;
-
     }
 
+
+    // ===== Keep position within one complete set =====
+
+    function wrapPosition(value) {
+
+        if (setWidth <= 0) {
+            return value;
+        }
+
+        return ((value % setWidth) + setWidth) % setWidth - setWidth;
+    }
+
+
+    // ===== Resume after inactivity =====
+
+    function scheduleResume() {
+
+        clearTimeout(resumeTimer);
+
+        resumeTimer = setTimeout(() => {
+            isPaused = false;
+        }, resumeDelay);
+    }
+
+
+    // ===== Automatic animation =====
 
     function animateMarquee(timestamp) {
 
@@ -189,39 +225,209 @@ if (marquee && marqueeContent) {
         }
 
         const elapsed = timestamp - lastTime;
+
         lastTime = timestamp;
 
 
-        if (!isPaused && setWidth > 0) {
+        if (!isPaused && !isDragging && setWidth > 0) {
 
-            // Move according to actual elapsed time
             position -= speed * (elapsed / 1000);
 
-            // Once we've travelled one complete set,
-            // wrap the position without changing what is visible.
             if (position <= -setWidth) {
                 position += setWidth;
             }
-
-            marqueeContent.style.transform =
-                `translate3d(${position}px, 0, 0)`;
         }
+
+
+        marqueeContent.style.transform =
+            `translate3d(${position}px, 0, 0)`;
+
 
         requestAnimationFrame(animateMarquee);
     }
 
 
-    // Pause while hovering
-    marquee.addEventListener("mouseenter", () => {
+    // =========================================
+    // MOUSE DRAGGING
+    // =========================================
+
+    marquee.addEventListener("mousedown", (e) => {
+
+        // Only respond to the primary mouse button
+        if (e.button !== 0) return;
+
+        isDragging = true;
+        hasDragged = false;
+
+        dragStartX = e.clientX;
+        dragStartPosition = position;
+
         isPaused = true;
+
+        clearTimeout(resumeTimer);
+
+        marquee.classList.add("dragging");
+
+        e.preventDefault();
     });
+
+
+    window.addEventListener("mousemove", (e) => {
+
+        if (!isDragging) return;
+
+        const distance = e.clientX - dragStartX;
+
+        // Require a small movement before considering this a drag
+        if (Math.abs(distance) > 5) {
+            hasDragged = true;
+        }
+
+        position = wrapPosition(
+            dragStartPosition + distance
+        );
+
+    });
+
+
+    window.addEventListener("mouseup", () => {
+
+        if (!isDragging) return;
+
+        isDragging = false;
+
+        marquee.classList.remove("dragging");
+
+        // Resume after inactivity
+        scheduleResume();
+    });
+
+
+    // =========================================
+    // TOUCH DRAGGING
+    // =========================================
+
+    marquee.addEventListener("touchstart", (e) => {
+
+        if (e.touches.length !== 1) return;
+
+        isDragging = true;
+        hasDragged = false;
+
+        dragStartX = e.touches[0].clientX;
+        dragStartPosition = position;
+
+        isPaused = true;
+
+        clearTimeout(resumeTimer);
+
+        marquee.classList.add("dragging");
+
+    }, { passive: true });
+
+
+    marquee.addEventListener("touchmove", (e) => {
+
+        if (!isDragging || e.touches.length !== 1) {
+            return;
+        }
+
+        const distance =
+            e.touches[0].clientX - dragStartX;
+
+        if (Math.abs(distance) > 5) {
+            hasDragged = true;
+        }
+
+        position = wrapPosition(
+            dragStartPosition + distance
+        );
+
+    }, { passive: true });
+
+
+    marquee.addEventListener("touchend", () => {
+
+        if (!isDragging) return;
+
+        isDragging = false;
+
+        marquee.classList.remove("dragging");
+
+        // Resume after inactivity
+        scheduleResume();
+
+    });
+
+
+    // =========================================
+    // PREVENT ACCIDENTAL LINKS AFTER DRAGGING
+    // =========================================
+
+    marquee.addEventListener("click", (e) => {
+
+        if (hasDragged) {
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            hasDragged = false;
+        }
+
+    }, true);
+
+
+    // =========================================
+    // DESKTOP HOVER
+    // =========================================
+
+    marquee.addEventListener("mouseenter", () => {
+
+        if (!isDragging) {
+            isPaused = true;
+        }
+
+    });
+
 
     marquee.addEventListener("mouseleave", () => {
-        isPaused = false;
+
+        if (!isDragging) {
+            isPaused = false;
+        }
+
     });
 
 
-    // Wait until all images have loaded
+    // =========================================
+    // RESUME WHEN RETURNING TO PAGE
+    // =========================================
+
+    window.addEventListener("pageshow", () => {
+
+        isPaused = false;
+        isDragging = false;
+
+    });
+
+
+    // =========================================
+    // RESUME WHEN PAGE BECOMES VISIBLE
+    // =========================================
+
+    document.addEventListener("visibilitychange", () => {
+
+        if (!document.hidden) {
+            isPaused = false;
+        }
+
+    });
+
+
+    // =========================================
+    // INITIAL SETUP
+    // =========================================
+
     window.addEventListener("load", () => {
 
         measureMarquee();
@@ -231,8 +437,7 @@ if (marquee && marqueeContent) {
     });
 
 
-    // Recalculate width if the window changes size.
-    // This does NOT remove or recreate anything.
+    // Recalculate when the viewport changes
     window.addEventListener("resize", measureMarquee);
 
 }
